@@ -14,10 +14,20 @@ namespace HelloActor
 
             // TODO: dem Aktor eine String Nachricht "Hello" senden
 
+            // TODO: Nachrichten von andere Datentypen an den Actor senden
+
+            // TODO: zweiten HelloActor (anderer Name!) anlegen
+
+            // TODO: wechselweise beiden Aktoren Nachrichten senden
+
+            // Gotcha: Aktor mit gleichem Namen anlegen
+
+            // TODO: Aktor Namen des Senders und Empfängers mit ausgeben (Hinweis: Context)
+
             Console.WriteLine("Press [enter] to stop");
             Console.ReadLine();
 
-            system.Terminate();
+            system.Terminate().Wait();
         }
     }
 
