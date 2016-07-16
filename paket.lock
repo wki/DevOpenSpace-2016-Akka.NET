@@ -1,7 +1,15 @@
 NUGET
   remote: https://www.nuget.org/api/v2
-    Akka (1.1)
+    Akka (1.1.1)
       Newtonsoft.Json (>= 7.0.1)
+      System.Collections.Immutable (>= 1.1.36)
+    Akka.TestKit (1.1.1)
+      Akka (>= 1.1.1)
+    Akka.TestKit.NUnit (1.0.8)
+      Akka (>= 1.0.8)
+      Akka.TestKit (>= 1.0.8)
+      Newtonsoft.Json (>= 7.0.1)
+      NUnit (>= 2.6.4)
       System.Collections.Immutable (>= 1.1.36)
     Microsoft.CSharp (4.0.1) - framework: >= netstandard10
       System.Collections (>= 4.0.11) - framework: dnxcore50, >= netstandard13
@@ -45,19 +53,12 @@ NUGET
       System.Threading.Tasks (>= 4.0.11) - framework: >= netstandard10
       System.Xml.ReaderWriter (>= 4.0.11) - framework: >= netstandard10
       System.Xml.XDocument (>= 4.0.11) - framework: >= netstandard10
+    NUnit (2.6.4)
     System.Collections (4.0.11) - framework: >= netstandard10
       Microsoft.NETCore.Platforms (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
       Microsoft.NETCore.Targets (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
       System.Runtime (>= 4.1) - framework: dnxcore50, netstandard10, >= netstandard13
-    System.Collections.Immutable (1.2)
-      System.Collections (>= 4.0.11) - framework: >= netstandard10
-      System.Diagnostics.Debug (>= 4.0.11) - framework: >= netstandard10
-      System.Globalization (>= 4.0.11) - framework: >= netstandard10
-      System.Linq (>= 4.1) - framework: >= netstandard10
-      System.Resources.ResourceManager (>= 4.0.1) - framework: >= netstandard10
-      System.Runtime (>= 4.1) - framework: >= netstandard10
-      System.Runtime.Extensions (>= 4.1) - framework: >= netstandard10
-      System.Threading (>= 4.0.11) - framework: >= netstandard10
+    System.Collections.Immutable (1.1.36)
     System.Diagnostics.Debug (4.0.11) - framework: >= netstandard10
       Microsoft.NETCore.Platforms (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
       Microsoft.NETCore.Targets (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
