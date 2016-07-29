@@ -11,6 +11,19 @@ NUGET
       Newtonsoft.Json (>= 7.0.1)
       NUnit (>= 2.6.4)
       System.Collections.Immutable (>= 1.1.36)
+    CommonServiceLocator (1.3)
+    Microsoft.AspNet.WebApi.Client (5.2.3)
+      Microsoft.Net.Http (>= 2.2.22) - framework: portable-wp80+win+wp81+wpa81
+      Newtonsoft.Json (>= 6.0.4) - framework: >= net45, portable-wp80+win+wp81+wpa81
+    Microsoft.AspNet.WebApi.Core (5.2.3)
+      Microsoft.AspNet.WebApi.Client (>= 5.2.3)
+    Microsoft.AspNet.WebApi.Owin (5.2.3)
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3 < 5.3)
+      Microsoft.Owin (>= 2.0.2)
+      Owin (>= 1.0)
+    Microsoft.Bcl (1.1.10) - framework: portable-wp80+win+wp81+wpa81
+      Microsoft.Bcl.Build (>= 1.0.14)
+    Microsoft.Bcl.Build (1.0.21) - import_targets: false, framework: portable-wp80+win+wp81+wpa81
     Microsoft.CSharp (4.0.1) - framework: >= netstandard10
       System.Collections (>= 4.0.11) - framework: dnxcore50, >= netstandard13
       System.Diagnostics.Debug (>= 4.0.11) - framework: dnxcore50, >= netstandard13
@@ -28,8 +41,31 @@ NUGET
       System.Runtime.Extensions (>= 4.1) - framework: dnxcore50, >= netstandard13
       System.Runtime.InteropServices (>= 4.1) - framework: dnxcore50, >= netstandard13
       System.Threading (>= 4.0.11) - framework: dnxcore50, >= netstandard13
+    Microsoft.Net.Http (2.2.29) - framework: portable-wp80+win+wp81+wpa81
+      Microsoft.Bcl (>= 1.1.10)
+      Microsoft.Bcl.Build (>= 1.0.14)
     Microsoft.NETCore.Platforms (1.0.1) - framework: >= netstandard10
     Microsoft.NETCore.Targets (1.0.1) - framework: >= netstandard10
+    Microsoft.Owin (3.0.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.Diagnostics (3.0.1)
+      Microsoft.Owin (>= 3.0.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.FileSystems (3.0.1)
+    Microsoft.Owin.Host.HttpListener (3.0.1)
+    Microsoft.Owin.Hosting (3.0.1)
+      Microsoft.Owin (>= 3.0.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.SelfHost (3.0.1)
+      Microsoft.Owin (>= 3.0.1)
+      Microsoft.Owin.Diagnostics (>= 3.0.1)
+      Microsoft.Owin.Host.HttpListener (>= 3.0.1)
+      Microsoft.Owin.Hosting (>= 3.0.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.StaticFiles (3.0.1)
+      Microsoft.Owin (>= 3.0.1)
+      Microsoft.Owin.FileSystems (>= 3.0.1)
+      Owin (>= 1.0)
     Newtonsoft.Json (9.0.1)
       Microsoft.CSharp (>= 4.0.1) - framework: >= netstandard10
       System.Collections (>= 4.0.11) - framework: >= netstandard10
@@ -54,6 +90,7 @@ NUGET
       System.Xml.ReaderWriter (>= 4.0.11) - framework: >= netstandard10
       System.Xml.XDocument (>= 4.0.11) - framework: >= netstandard10
     NUnit (2.6.4)
+    Owin (1.0)
     System.Collections (4.0.11) - framework: >= netstandard10
       Microsoft.NETCore.Platforms (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
       Microsoft.NETCore.Targets (>= 1.0.1) - framework: dnxcore50, netstandard10, >= netstandard13
@@ -250,3 +287,8 @@ NUGET
       System.Text.Encoding (>= 4.0.11) - framework: dnxcore50, >= netstandard13
       System.Threading (>= 4.0.11) - framework: dnxcore50, >= netstandard13
       System.Xml.ReaderWriter (>= 4.0.11) - framework: dnxcore50, netstandard10, >= netstandard13
+    Unity (4.0.1)
+      CommonServiceLocator (>= 1.3)
+    Unity.WebAPI (5.2.3)
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3)
+      Unity (>= 4.0.1)

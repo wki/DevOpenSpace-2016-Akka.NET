@@ -3,12 +3,33 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{44ED1EFC-0C6E-4E26-ADB7-11216045A9C7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>GuessMyNumber</RootNamespace>
-    <AssemblyName>GuessMyNumber</AssemblyName>
+    <ProjectGuid>{84C19F66-D516-423F-BC0E-6389677DF929}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ToDoList</RootNamespace>
+    <AssemblyName>ToDoList</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -16,34 +37,45 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>6</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
     <Optimize>true</Optimize>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>6</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Actors\Enquirer.cs" />
-    <Compile Include="Messages\Guessed.cs" />
-    <Compile Include="Messages\TestTry.cs" />
-    <Compile Include="Messages\TryTooBig.cs" />
-    <Compile Include="Messages\TryTooSmall.cs" />
-    <Compile Include="Actors\Chooser.cs" />
-    <Compile Include="Actors\GuessGame.cs" />
-    <Compile Include="Messages\Start.cs" />
-    <Compile Include="Messages\Started.cs" />
+    <Compile Include="Actors\DurableActor.cs" />
+    <Compile Include="Messages\RestoreFromJournal.cs" />
+    <Compile Include="Messages\CompletedRestore.cs" />
+    <Compile Include="Actors\JournalWriter.cs" />
+    <Compile Include="Actors\JournalReader.cs" />
+    <Compile Include="Messages\PersistToJournal.cs" />
+    <Compile Include="Actors\JournalActor.cs" />
+    <Compile Include="Actors\DurableView.cs" />
+    <Compile Include="Actors\Handler.cs" />
+    <Compile Include="Actors\DurableBase.cs" />
+    <Compile Include="IToDoService.cs" />
+    <Compile Include="ToDoService.cs" />
+    <Compile Include="Actors\ToDoDispatcher.cs" />
+    <Compile Include="Messages\ListToDos.cs" />
+    <Compile Include="Messages\SpecifyToDo.cs" />
+    <Compile Include="Messages\MoveUpToDo.cs" />
+    <Compile Include="Actors\ToDos.cs" />
+    <Compile Include="Messages\ToDoDocument.cs" />
+    <Compile Include="Actors\ToDo.cs" />
+    <Compile Include="Messages\ToDoSpecified.cs" />
+    <Compile Include="Messages\ToDoMovedUp.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <UsingTask TaskName="CopyRuntimeDependencies" AssemblyFile="..\..\.paket\paket.exe" />
@@ -51,8 +83,7 @@
     <CopyRuntimeDependencies OutputPath="$(OutDir)" TargetFramework="$(TargetFrameworkIdentifier) - $(TargetFrameworkVersion)" ProjectsWithRuntimeLibs="System.Dynamic.Runtime;System.Linq.Expressions;System.Reflection.TypeExtensions;System.Runtime.Serialization.Primitives;System.Threading" />
   </Target>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="paket.references" />
+    <None Include="README.md" />
   </ItemGroup>
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">

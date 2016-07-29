@@ -3,12 +3,33 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{44ED1EFC-0C6E-4E26-ADB7-11216045A9C7}</ProjectGuid>
+    <ProjectGuid>{F1E3EE88-9F07-4C2E-B2A8-1003399F0E12}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GuessMyNumber</RootNamespace>
-    <AssemblyName>GuessMyNumber</AssemblyName>
+    <RootNamespace>PiCalculator</RootNamespace>
+    <AssemblyName>PiCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -33,17 +54,13 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Actors\Enquirer.cs" />
-    <Compile Include="Messages\Guessed.cs" />
-    <Compile Include="Messages\TestTry.cs" />
-    <Compile Include="Messages\TryTooBig.cs" />
-    <Compile Include="Messages\TryTooSmall.cs" />
-    <Compile Include="Actors\Chooser.cs" />
-    <Compile Include="Actors\GuessGame.cs" />
-    <Compile Include="Messages\Start.cs" />
-    <Compile Include="Messages\Started.cs" />
+    <Compile Include="Actors\Master.cs" />
+    <Compile Include="Actors\Worker.cs" />
+    <Compile Include="Actors\RoutingMaster.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Actors\Router.cs" />
+    <Compile Include="Actors\ConfigRoutingMaster.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <UsingTask TaskName="CopyRuntimeDependencies" AssemblyFile="..\..\.paket\paket.exe" />
@@ -51,8 +68,7 @@
     <CopyRuntimeDependencies OutputPath="$(OutDir)" TargetFramework="$(TargetFrameworkIdentifier) - $(TargetFrameworkVersion)" ProjectsWithRuntimeLibs="System.Dynamic.Runtime;System.Linq.Expressions;System.Reflection.TypeExtensions;System.Runtime.Serialization.Primitives;System.Threading" />
   </Target>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="paket.references" />
+    <None Include="app.config" />
   </ItemGroup>
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">

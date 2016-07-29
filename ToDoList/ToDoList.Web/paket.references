@@ -1,0 +1,16 @@
+﻿Akka
+
+CommonServiceLocator
+Microsoft.AspNet.WebApi.Client
+Microsoft.AspNet.WebApi.Core
+Microsoft.Owin
+Microsoft.Owin.Diagnostics
+Microsoft.AspNet.WebApi.Owin
+Microsoft.Owin.FileSystems
+Microsoft.Owin.Host.HttpListener
+Microsoft.Owin.Hosting
+Microsoft.Owin.SelfHost
+Microsoft.Owin.StaticFiles
+Owin
+Unity
+Unity.WebAPI
