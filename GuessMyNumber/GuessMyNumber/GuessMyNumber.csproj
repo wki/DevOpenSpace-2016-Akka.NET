@@ -8,7 +8,7 @@
     <RootNamespace>GuessMyNumber</RootNamespace>
     <AssemblyName>GuessMyNumber</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -46,10 +46,6 @@
     <Compile Include="Messages\Started.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <UsingTask TaskName="CopyRuntimeDependencies" AssemblyFile="..\..\.paket\paket.exe" />
-  <Target Name="AfterBuild" Condition="Exists('..\..\.paket\paket.exe')">
-    <CopyRuntimeDependencies OutputPath="$(OutDir)" TargetFramework="$(TargetFrameworkIdentifier) - $(TargetFrameworkVersion)" ProjectsWithRuntimeLibs="System.Dynamic.Runtime;System.Linq.Expressions;System.Reflection.TypeExtensions;System.Runtime.Serialization.Primitives;System.Threading" />
-  </Target>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="paket.references" />
