@@ -24,8 +24,10 @@ namespace SimpleServer
         public HelloActor()
         {
             Receive<string>(s =>
-                Console.WriteLine($"String '{s}' received from {Sender}")
-            );
+                {
+                    Console.WriteLine($"String '{s}' received from {Sender}");
+                    Sender.Tell($"Answer to '{s}'");
+                });
         }
     }
 }

@@ -62,10 +62,6 @@
     <Compile Include="Actors\TextReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <UsingTask TaskName="CopyRuntimeDependencies" AssemblyFile="..\..\.paket\paket.exe" />
-  <Target Name="AfterBuild" Condition="Exists('..\..\.paket\paket.exe')">
-    <CopyRuntimeDependencies OutputPath="$(OutDir)" TargetFramework="$(TargetFrameworkIdentifier) - $(TargetFrameworkVersion)" ProjectsWithRuntimeLibs="System.Dynamic.Runtime;System.Linq.Expressions;System.Reflection.TypeExtensions;System.Runtime.Serialization.Primitives;System.Threading" />
-  </Target>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
