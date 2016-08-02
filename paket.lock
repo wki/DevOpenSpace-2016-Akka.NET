@@ -16,6 +16,7 @@ NUGET
       Newtonsoft.Json (>= 7.0.1)
       NUnit (>= 2.6.4)
       System.Collections.Immutable (>= 1.1.36)
+    CommandLineParser (1.9.71)
     CommonServiceLocator (1.3)
     Google.ProtocolBuffers (2.4.1.555)
     Helios (2.1.2)
