@@ -15,8 +15,7 @@ namespace SudokuSolver.Actors
 
         private List<int> statistics;
 
-        public SudokuBlock(IActorRef printer, int block)
-            : base(printer)
+        public SudokuBlock(int block)
         {
             this.block = block;
 

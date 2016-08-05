@@ -12,7 +12,6 @@ namespace SudokuSolver
         private Dictionary<Type, int> statistics;
 
         public StatisticsCollector()
-            :base(null)
         {
             statistics = new Dictionary<Type, int>();
 

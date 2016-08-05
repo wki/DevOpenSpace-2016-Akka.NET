@@ -9,11 +9,8 @@ namespace SudokuSolver.Actors
     /// </summary>
     public class SudokuActor : ReceiveActor
     {
-        private readonly IActorRef printActor;
-
-        public SudokuActor(IActorRef printActor)
+        public SudokuActor()
         {
-            this.printActor = printActor;
         }
 
         protected override void PreStart()
@@ -42,7 +39,14 @@ namespace SudokuSolver.Actors
 
         protected void PrintLine(int row, int col, string line)
         {
-            printActor.Tell(new PrintLine(row, col, line));
+            // printActor.Tell(new PrintLine(row, col, line));
+
+            // NEVER do this in production. NEVER!
+            lock (Context.System)
+            {
+                Console.SetCursorPosition(col, row);
+                Console.WriteLine(line);
+            }
         }
     }
 }

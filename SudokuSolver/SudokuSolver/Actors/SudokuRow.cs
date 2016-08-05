@@ -15,8 +15,7 @@ namespace SudokuSolver.Actors
 
         private List<int> statistics;
 
-        public SudokuRow(IActorRef printer, int row)
-            : base(printer)
+        public SudokuRow(int row)
         {
             this.row = row;
 

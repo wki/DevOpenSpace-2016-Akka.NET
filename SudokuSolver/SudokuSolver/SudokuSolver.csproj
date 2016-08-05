@@ -67,8 +67,6 @@
     <Compile Include="Actors\SudokuBlock.cs" />
     <Compile Include="Messages\StrikeDigit.cs" />
     <Compile Include="Messages\HandleDigit.cs" />
-    <Compile Include="Actors\Printer.cs" />
-    <Compile Include="Messages\PrintLine.cs" />
     <Compile Include="Actors\StatisticsCollector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

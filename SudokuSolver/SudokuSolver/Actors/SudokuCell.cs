@@ -18,8 +18,7 @@ namespace SudokuSolver.Actors
 
         private HashSet<int> possibleDigits;
 
-        public SudokuCell(IActorRef printer, int row, int col)
-            : base(printer)
+        public SudokuCell(int row, int col)
         {
             this.row = row;
             this.col = col;

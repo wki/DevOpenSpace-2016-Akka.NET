@@ -42,12 +42,10 @@ namespace SudokuSolver
 
         private static void CreateSudokuActors(ActorSystem system)
         {
-            var printer = system.ActorOf<Printer>();
-
             for (int row = 0; row < 9; row++)
             {
                 system.ActorOf(
-                    Props.Create<SudokuRow>(printer, row), 
+                    Props.Create<SudokuRow>(row), 
                     String.Format("r-{0}", row)
                 );
 
@@ -55,12 +53,12 @@ namespace SudokuSolver
                 {
                     if (row == 0)
                         system.ActorOf(
-                            Props.Create<SudokuCol>(printer, col), 
+                            Props.Create<SudokuCol>(col), 
                             String.Format("c-{0}", col)
                         );
 
                     system.ActorOf(
-                        Props.Create<SudokuCell>(printer, row, col), 
+                        Props.Create<SudokuCell>(row, col), 
                         String.Format("{0}-{1}", row, col)
                     );
                 }
@@ -68,7 +66,7 @@ namespace SudokuSolver
                 
             for (int block = 0; block < 9; block++)
                 system.ActorOf(
-                    Props.Create<SudokuBlock>(printer, block), 
+                    Props.Create<SudokuBlock>(block), 
                     String.Format("b-{0}", block)
                 );
         }
