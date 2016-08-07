@@ -1,6 +1,7 @@
 source https://www.nuget.org/api/v2
 
 nuget Akka
+nuget Akka.Cluster
 nuget Akka.Remote
 nuget Akka.TestKit.Nunit
 nuget NUnit 2.6.4
