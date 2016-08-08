@@ -1,0 +1,14 @@
+<WorkspaceItem ctype="Workspace">
+  <Items>
+    <Item>Cluster/Cluster.sln</Item>
+    <Item>CrashingHelloActor/CrashingHelloActor.sln</Item>
+    <Item>GuessMyNumber/GuessMyNumber.sln</Item>
+    <Item>HelloActor/HelloActor.sln</Item>
+    <Item>MapReduce/MapReduce.sln</Item>
+    <Item>PiCalculator/PiCalculator.sln</Item>
+    <Item>Remote/Remote.sln</Item>
+    <Item>SudokuSolver/SudokuSolver.sln</Item>
+    <Item>ToDoList/ToDoList.sln</Item>
+    <Item>WordCount/WordCount.sln</Item>
+  </Items>
+</WorkspaceItem>
