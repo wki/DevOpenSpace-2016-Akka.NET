@@ -20,18 +20,23 @@ using System.Linq;
 
 // copied from https://github.com/petabridge/lighthouse
 // and moved from TopShelf service to a standalone program
-namespace Lighthouse
+namespace SeedNode
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var system = LaunchLighthouse();
+            var options = new AppOptions();
 
-            Console.WriteLine("Press [enter] to continue");
-            Console.ReadLine();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            {
+                var system = LaunchLighthouse(options.IpAddress, options.Port);
 
-            system.Terminate().Wait();
+                Console.WriteLine("Press [enter] to continue");
+                Console.ReadLine();
+
+                system.Terminate().Wait();
+            }
         }
 
         public static ActorSystem LaunchLighthouse(string ipAddress = null, int? specifiedPort = null)
