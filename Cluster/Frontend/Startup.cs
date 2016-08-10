@@ -26,11 +26,11 @@ namespace Frontend
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileSystem = new PhysicalFileSystem(@"./www"),
-            }
-            );
+            //app.UseStaticFiles(new StaticFileOptions
+            //    {
+            //        FileSystem = new PhysicalFileSystem(@"./www"),
+            //    }
+            //);
 
             app.Use<RedirectRootMiddleware>();
 

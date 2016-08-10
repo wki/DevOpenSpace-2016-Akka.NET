@@ -21,7 +21,7 @@ namespace Frontend.Controllers
         /// Erhöhen der angegebenen Zahl
         /// </summary>
         /// <param name="i">Zahl.</param>
-        [HttpPost, Route("{i}")]
+        [HttpGet Route("{i}")]
         public Task<int> MoveUpToDo([FromUri] int i)
         {
             return backendService.Increment(i);

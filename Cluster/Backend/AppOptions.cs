@@ -5,7 +5,7 @@ namespace Backend
 {
     public class AppOptions
     {
-        [Option('p', "port", DefaultValue = null, HelpText = "port to listen on (choose 4055, 4056, 4057)")]
+        [Option('p', "port", DefaultValue = null, HelpText = "port to listen on (choose 4056, 4057, 4058)")]
         public int? Port { get; set; }
 
         [HelpOption]
