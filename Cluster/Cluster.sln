@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor", "Monitor\Monitor.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Actors", "Common.Actors\Common.Actors.csproj", "{CDEFF57A-39A0-4CD3-B4AB-BF7425F8D55F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{373877F8-6A17-43BA-B4A3-7056C60F3752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{4CADF6A8-9B58-420C-95A5-3E6D8DE5E6C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{CDEFF57A-39A0-4CD3-B4AB-BF7425F8D55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDEFF57A-39A0-4CD3-B4AB-BF7425F8D55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDEFF57A-39A0-4CD3-B4AB-BF7425F8D55F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373877F8-6A17-43BA-B4A3-7056C60F3752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373877F8-6A17-43BA-B4A3-7056C60F3752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373877F8-6A17-43BA-B4A3-7056C60F3752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373877F8-6A17-43BA-B4A3-7056C60F3752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CADF6A8-9B58-420C-95A5-3E6D8DE5E6C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CADF6A8-9B58-420C-95A5-3E6D8DE5E6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CADF6A8-9B58-420C-95A5-3E6D8DE5E6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CADF6A8-9B58-420C-95A5-3E6D8DE5E6C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
