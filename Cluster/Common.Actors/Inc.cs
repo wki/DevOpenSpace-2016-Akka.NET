@@ -6,7 +6,10 @@ namespace Common.Actors
     {
         public Inc()
         {
-            Receive<int>(i => Sender.Tell(i + 1));
+            Receive<int>(i => {
+                Context.System.Log.Info($"Received {i} from {Sender}");
+                Sender.Tell(i + 1);
+            });
         }
     }
 }
