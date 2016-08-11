@@ -11,5 +11,12 @@ namespace Common.Actors
                 Sender.Tell(i + 1);
             });
         }
+
+        protected override void PreStart()
+        {
+            base.PreStart();
+
+            Context.System.Log.Info($"Starting Inc Actor on {Context.Self}");
+        }
     }
 }
