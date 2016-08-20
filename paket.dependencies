@@ -4,6 +4,7 @@ nuget Akka
 nuget Akka.Cluster
 nuget Akka.Remote
 nuget Akka.TestKit.Nunit
+nuget Microsoft.AspNet.SignalR.SelfHost
 nuget NUnit 2.6.4
 nuget System.Collections.Immutable 1.1.36
 nuget CommandLineParser 1.9.71
