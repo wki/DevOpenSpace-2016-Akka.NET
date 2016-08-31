@@ -35,6 +35,9 @@ namespace SimpleClient
         {
             Context.System.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
                   .Tell("Hi there");
+            Context.System.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
+                  .Tell(4711);
+
         }
     }
 }
