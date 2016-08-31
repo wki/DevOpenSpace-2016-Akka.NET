@@ -1,4 +1,4 @@
-Actors:
+# Actors:
 
 DurableActor : UntypedActor, IWithUnboundedstash
  : Basisklasse für einen persistenten Aktor
@@ -28,8 +28,14 @@ JournalReader : JournalActor
 
 
 
---- Was muss passieren?
+# Was muss passieren?
 
 PersistToJournal --> Publish
 
 Recover<> --> Subscribe
+
+
+# Verbindung zum View
+
+SignalR
+

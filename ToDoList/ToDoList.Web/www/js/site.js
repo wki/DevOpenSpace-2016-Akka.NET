@@ -16,31 +16,31 @@ function ToDoListController($http) {
     console.log("starting ToDoListController");
 
     // ToDo Liste abrufen
-	self.fetch = function() {
-	    console.log("loading ToDos");
+    self.fetch = function() {
+        console.log("loading ToDos");
 
-	    $http.get("/api/todo", { cache: false })
-	         .then(
-	             function(response) { self.todos = response.data; },
-	             function(response) { throw new Error("load error"); }
-	         );
-	};
+        $http.get("/api/todo", { cache: false })
+             .then(
+                 function(response) { self.todos = response.data; },
+                 function(response) { throw new Error("load error"); }
+             );
+    };
 
-	// ToDo speichern
-	self.specify = function() {
-	    console.log("specifying ToDo");
+    // ToDo speichern
+    self.specify = function() {
+        console.log("specifying ToDo");
 
-	    $http.post("/api/todo", self.todo);
-	};
+        $http.post("/api/todo", self.todo);
+    };
 
-	// Daten ToDo Liste
-	self.todos = [];
+    // Daten ToDo Liste
+    self.todos = [];
 
-	// Daten Eingabeformular
-	self.todo = {
-	    id: "einkaufen",
-	    description: "Unbedingt Milch einkaufen"
-	};
+    // Daten Eingabeformular
+    self.todo = {
+        id: "einkaufen",
+        description: "Unbedingt Milch einkaufen"
+    };
 
-	self.fetch();
+    self.fetch();
 }

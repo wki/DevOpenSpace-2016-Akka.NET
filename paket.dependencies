@@ -2,8 +2,10 @@ source https://www.nuget.org/api/v2
 
 nuget Akka
 nuget Akka.Cluster
+nuget Akka.FSharp
 nuget Akka.Remote
 nuget Akka.TestKit.Nunit
+nuget microsoft.aspnet.signalr.js
 nuget Microsoft.AspNet.SignalR.SelfHost
 nuget NUnit 2.6.4
 nuget System.Collections.Immutable 1.1.36
@@ -22,3 +24,4 @@ nuget Microsoft.Owin.StaticFiles 3.0.1
 nuget Owin 1.0
 nuget Unity 4.0.1
 nuget Unity.WebAPI 5.2.3
+nuget FsPickler 2.4.0

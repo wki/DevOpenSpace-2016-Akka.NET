@@ -1,59 +1,61 @@
 ﻿<!DOCTYPE>
 <html ng-app="todos">
-	<head>
-		<title>Akka.NET Web Api Demo</title>
-		<script src="/js/jquery-2.2.0.min.js"></script>
-	    <script src="/js/angular.min.js"></script>
-	    <script src="/js/bootstrap.min.js"></script>
-	    <script src="/js/site.js"></script>
-	    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-	    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
-	</head>
-	<body>
+    <head>
+        <title>Akka.NET Web Api Demo</title>
+        <script src="/js/jquery-2.2.0.min.js"></script>
+        <script src="/js/angular.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.signalR-2.2.1.min.js"></script>
+        <script src="/signalr/hubs"></script>
+        <script src="/js/site.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+    </head>
+    <body>
 
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Akka.NET ToDo List</h1>
-			</div>
-		</div>
-		
-		<div class="container" ng-controller="ToDoListController as data">
-			<div class="row">
-				<div class="col-md-4">
-					<h2>new ToDo</h2>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Akka.NET ToDo List</h1>
+            </div>
+        </div>
+        
+        <div class="container" ng-controller="ToDoListController as data">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>new ToDo</h2>
 
-					<form>
+                    <form>
 
-					<fieldset class="form-group">
-					<label for="input-id">Id:</label> <input id="input-id" class="form-control" ng-model="data.todo.id" />
-					</fieldset>
+                    <fieldset class="form-group">
+                    <label for="input-id">Id:</label> <input id="input-id" class="form-control" ng-model="data.todo.id" />
+                    </fieldset>
 
-					<fieldset class="form-group">
-					<label for="input-description">Description:</label> <input id="input-description" class="form-control" ng-model="data.todo.description" />
-					</fieldset>
+                    <fieldset class="form-group">
+                    <label for="input-description">Description:</label> <input id="input-description" class="form-control" ng-model="data.todo.description" />
+                    </fieldset>
 
-					<button ng-click="data.specify()">Specify</button>
+                    <button ng-click="data.specify()">Specify</button>
 
-					</form>
-				</div>
-				<div class="col-md-8">
-					<button style="float:right" ng-click="data.fetch()">reload</button>
-					<h2>ToDos</h2>
+                    </form>
+                </div>
+                <div class="col-md-8">
+                    <button style="float:right" ng-click="data.fetch()">reload</button>
+                    <h2>ToDos</h2>
 
-					<table class="table">
-						<thead>
-							<tr><th>Name</th><th>Description</th></tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="todo in data.todos">
-							    <td>{{todo.Id}}</td>
-							    <td>{{todo.Description}}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>Name</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="todo in data.todos">
+                                <td>{{todo.Id}}</td>
+                                <td>{{todo.Description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-	</body>
+    </body>
 </html>

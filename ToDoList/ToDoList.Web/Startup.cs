@@ -36,6 +36,8 @@ namespace ToDoList.Web
             app.Use<RedirectRootMiddleware>();
 
             app.UseWebApi(config);
+
+            app.MapSignalR();
         }
 
         public class RedirectRootMiddleware : OwinMiddleware
@@ -61,6 +63,7 @@ namespace ToDoList.Web
 
         private IUnityContainer SetupContainer()
         {
+            // evtl. weiterer Service, der den Hub kennt
             var todoService = new ToDoService();
 
             var container = new UnityContainer();

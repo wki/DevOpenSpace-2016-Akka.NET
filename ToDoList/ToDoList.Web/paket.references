@@ -11,6 +11,8 @@ Microsoft.Owin.Host.HttpListener
 Microsoft.Owin.Hosting
 Microsoft.Owin.SelfHost
 Microsoft.Owin.StaticFiles
+Microsoft.AspNet.SignalR.JS
+Microsoft.AspNet.SignalR.SelfHost
 Owin
 Unity
 Unity.WebAPI

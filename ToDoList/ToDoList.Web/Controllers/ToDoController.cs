@@ -23,6 +23,10 @@ namespace ToDoList.Web
         public ToDoController(IToDoService todoService)
         {
             this.todoService = todoService;
+
+            // locate the hub.
+            // var hubContext = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<Notifier>();
+            
         }
 
         /// <summary>

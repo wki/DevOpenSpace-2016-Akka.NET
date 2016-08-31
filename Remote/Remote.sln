@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Start-Clients.ps1 = Start-Clients.ps1
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SimpleFsServer", "SimpleFsServer\SimpleFsServer.fsproj", "{C141F608-D0B3-484D-A436-70AA3B08ACE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{D61D751C-037B-4563-8239-21E61BC9F8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D61D751C-037B-4563-8239-21E61BC9F8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D61D751C-037B-4563-8239-21E61BC9F8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C141F608-D0B3-484D-A436-70AA3B08ACE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C141F608-D0B3-484D-A436-70AA3B08ACE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C141F608-D0B3-484D-A436-70AA3B08ACE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C141F608-D0B3-484D-A436-70AA3B08ACE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
