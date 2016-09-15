@@ -60,6 +60,8 @@ namespace PiCalculator
             stopWatch.Stop();
 
             Console.WriteLine("Elapsed: {0:N1}s", stopWatch.ElapsedMilliseconds / 1000.0);
+            Console.WriteLine("Press [enter] to continue");
+            Console.ReadLine();
         }
     }
 }
