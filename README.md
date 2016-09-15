@@ -13,6 +13,7 @@ Dieses Projekt bitte vor dem Workshop auschecken und in allen Projekten die NuGe
 Windows PowerShell: ./p.ps1 install
 Windows Eingabeaufforderung: ./p.cmd install
 OS-X/Linux Bash: ./p.sh install
+Visual-Studio Code: "Paket Install" in der Befehlspalette
 
 
 ## Projekte
