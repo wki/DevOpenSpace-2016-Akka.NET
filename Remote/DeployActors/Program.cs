@@ -60,7 +60,7 @@ namespace DeployActors
             var inc = system.ActorOf(
                 Props.Create<Increment>()
                      .WithRouter(FromConfig.Instance),
-                "IncTc"
+                "IncRr"
             );
 
             var random = new Random();

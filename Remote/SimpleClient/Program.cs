@@ -10,10 +10,14 @@ namespace SimpleClient
         {
             var system = ActorSystem.Create("Client", ConfigurationFactory.Load());
 
+            var senderActor = system.ActorOf(Props.Create<SenderActor>(), "sender");
+            // so klappt die Antwort nicht -- was könnte der Grund sein?
             //system.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
             //      .Tell("Hi there");
 
-            var senderActor = system.ActorOf(Props.Create<SenderActor>(), "sender");
+            // Alternative 1:
+            system.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
+                  .Tell("Hi there", senderActor);
 
             Console.WriteLine("Press [enter] to stop");
             Console.ReadLine();
@@ -33,11 +37,12 @@ namespace SimpleClient
 
         protected override void PreStart()
         {
-            Context.System.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
-                  .Tell("Hi there");
-            Context.System.ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
-                  .Tell(4711);
+            base.PreStart();
 
+            // Alternative 2:
+            //Context.System
+            //    .ActorSelection("akka.tcp://Server@localhost:8000/user/hello")
+            //    .Tell("Hi there");
         }
     }
 }

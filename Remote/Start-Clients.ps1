@@ -3,5 +3,5 @@
 #
 
 for ($port = 8081; $port -le 8084; $port++) {
-	Start-Process -FilePath PowerShell -ArgumentList @("-Command", "& DeployActors/bin/Release/DeployActors.exe -p $port")
+	Start-Process -FilePath PowerShell -ArgumentList @("-Command", "& DeployActors/bin/Debug/DeployActors.exe -p $port")
 }
