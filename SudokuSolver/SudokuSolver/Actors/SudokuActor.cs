@@ -39,6 +39,7 @@ namespace SudokuSolver.Actors
 
         protected void PrintLine(int row, int col, string line)
         {
+            // TODO:
             // printActor.Tell(new PrintLine(row, col, line));
 
             // NEVER do this in production. NEVER!
