@@ -23,6 +23,7 @@ OS-X/Linux Bash: ./p.sh install
  * MapReduce - Statistik Beispiel
  * PiCalculator - Concurrency ala Akka.NET
  * Remote - diverse Remote Beispiele
+ * Cluster - einfacher Cluster mit Monitor
  * SudokuSolver - 108 Aktoren lösen ein Sudoku
  * WordCount - einfache Stream Implementierung 
  * ToDoList - CQRS/ES und Web API
