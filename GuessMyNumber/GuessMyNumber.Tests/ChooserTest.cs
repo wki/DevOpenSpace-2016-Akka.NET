@@ -74,6 +74,7 @@ namespace GuessMyNumber.Tests
 
             // Assert
             // TODO: gab es die passende Antwort?
+            Assert.Fail("Implement this!");
 
         }
 
